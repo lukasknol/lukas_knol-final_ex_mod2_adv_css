@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "./variables.css";
+
+/* general styling */
+  body { 
+    background-image: linear-gradient(145deg, $color-white 0%, $color-grey 100%);
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  a:link, a:visited {
+    color: $color-grey-light;
+    text-decoration: none;
+  }
+  a:hover, a:active {
+      color: $color-white;
+  }
+
+  /* container */
+  .container {
+    border-radius: 20px;
+    box-shadow: 0 10px 20px $color-shadow-1, 0 6px 6px $color-shadow-2;
+    overflow: hidden;
+    max-width: 100%;
+    width: 400px;
+    &__body {
+      background-color: $color-white;
+      padding: 40px 40px 80px;
+      color: $color-grey-light;
+      font-size: 40px;
+      float: right;
+    }
+    &__right {
+      color: $color-grey-light;
+      font-size: 40px;
+      float: right;
+    }
+    &__p {
+      color: $color-grey-dark;
+      font-size: 20px;
+      line-height: 36px;
+      margin: 0;
+    }
+    &__footer {
+      background-color: $color-purple-blue;
+      color: $color-white;
+      padding: 40px;
+      text-align: center;
+    }
+    &__img {
+      border-radius: 50%;
+      border: 5px solid $color-white;
+      height: 120px;
+      width: 120px;
+      margin-top: -100px;
+    }
+    &__h3 {
+      margin: 10px 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    &__h4 {
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }

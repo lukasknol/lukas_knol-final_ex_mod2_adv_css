@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import "./variables";
+
+/* General styling */
+body {
+    background-image: linear-gradient(145deg, $color-white 0%, $color-grey 100%);
+    font-family: "Lato", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid styling */
+.grid {
+    display: flex; 
+	flex-wrap: wrap;
+	&__image {
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+		margin: 3%;
+		width: 97%;
+	}
+	&__image img {
+		object-fit: cover;
+		transition: transform 300ms ease-in;
+		height: 100%;  	
+		width: 100%;
+	}
+	&__overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 300ms ease-in;
+		background-color: $color-dark-blue;
+	}
+	&__image:hover img {
+		transform: scale(1.1);
+	}
+	&__image:hover &__overlay {
+		opacity: 1;
+	}
+	&__overlay button {
+		background-color: $color-white;
+		color: $color-dark-blue;
+		border: none;
+		border-radius: 3px;
+		font-size: 16px;
+		padding: 10px 12px;
+		cursor: pointer;
+	}
+}
+
+/* Media responsive tablet and desktop */
+@media screen and (min-width: 760px) {
+	.grid__image {
+		margin: 2%;
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.grid {
+		max-width: 1200px;
+		margin: 1% 0 1% 1%;
+		&__image {
+			margin: 1%;
+			width: 30%;
+		}
+	}
+}

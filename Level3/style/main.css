@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* import styling */
+/* font */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/* colors */
+/* general styling */
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #c3cfe2;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* social buttons */
+.social {
+  position: absolute;
+  width: 300px;
+  bottom: 50%;
+  right: 0%;
+  transform: translate(240px, 50%);
+}
+.social__buttons {
+  height: 60px;
+  color: #fff;
+}
+.social__buttons a {
+  color: #fff;
+  text-decoration: none;
+}
+.social__buttons:hover {
+  box-shadow: 0px 0px 3px 0px #3E3D3D;
+  margin-left: -200px;
+  transition: margin-left 400ms ease-in-out;
+}
+.social__buttons--blog {
+  background-color: #e17b77;
+}
+.social__buttons--twitter {
+  background-color: #00aced;
+}
+.social__buttons--linkedin {
+  background-color: #007bb6;
+}
+.social__buttons--facebook {
+  background-color: #3b5998;
+}
+.social__buttons--github {
+  background-color: #333;
+}
+.social__buttons::before {
+  display: inline-block;
+  width: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 20px;
+}
+.social__buttons--blog::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+.social__buttons--twitter::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "";
+}
+.social__buttons--linkedin::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "";
+}
+.social__buttons--facebook::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 0;
+  content: "";
+}
+.social__buttons--github::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "";
+}/*# sourceMappingURL=main.css.map */
